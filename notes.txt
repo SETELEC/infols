@@ -1,0 +1,205 @@
+Microsoft Windows [Versión 10.0.15063]
+(c) 2017 Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\Ronnie Shino>Documents/
+"Documents" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+
+C:\Users\Ronnie Shino>/Documents/
+"/Documents/" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+
+C:\Users\Ronnie Shino>cd C:/xampp/htdocs
+
+C:\xampp\htdocs>cd C:/xampp/htdocs/infols_informativa
+
+C:\xampp\htdocs\infols_informativa>git init
+Initialized empty Git repository in C:/xampp/htdocs/infols_informativa/.git/
+
+C:\xampp\htdocs\infols_informativa>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\xampp\htdocs\infols_informativa>git add test.txt
+
+C:\xampp\htdocs\infols_informativa>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   test.txt
+
+
+C:\xampp\htdocs\infols_informativa>git commit -m "En este commit se envía un comentario acerca de lo que se acaba de subir"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Fam. Carpio Chacón@Erickpc.(none)')
+
+C:\xampp\htdocs\infols_informativa>git config --global user.email "chaconcfdo@hotmail.com"
+
+C:\xampp\htdocs\infols_informativa>git config --global user.name "Erick Carpio"
+
+C:\xampp\htdocs\infols_informativa>git commit -m "En este commit se envía un comentario acerca de lo que se acaba de subir"
+[master (root-commit) 567778c] En este commit se envía un comentario acerca de lo que se acaba de subir
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test.txt
+
+C:\xampp\htdocs\infols_informativa>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index.php
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\xampp\htdocs\infols_informativa>git add '*.php'
+fatal: pathspec ''*.php'' did not match any files
+
+C:\xampp\htdocs\infols_informativa>git add *.php
+
+C:\xampp\htdocs\infols_informativa>git add status
+fatal: pathspec 'status' did not match any files
+
+C:\xampp\htdocs\infols_informativa>git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   index.php
+
+
+C:\xampp\htdocs\infols_informativa>git commit -m "Segundo comentario de checkin"
+[master a46bf5c] Segundo comentario de checkin
+ 1 file changed, 9 insertions(+)
+ create mode 100644 index.php
+
+C:\xampp\htdocs\infols_informativa>git remote add origin https://github.com/SETELEC/infols
+
+C:\xampp\htdocs\infols_informativa>git log
+commit a46bf5cf25fb91b2ed2581a008801ff198b65590 (HEAD -> master)
+Author: Erick Carpio <chaconcfdo@hotmail.com>
+Date:   Mon Aug 21 20:23:07 2017 -0600
+
+    Segundo comentario de checkin
+
+commit 567778c42ded9d8966f63f1b6d5e0e13e7394bee
+Author: Erick Carpio <chaconcfdo@hotmail.com>
+Date:   Mon Aug 21 20:17:38 2017 -0600
+
+    En este commit se env<C3><AD>a un comentario acerca de lo que se acaba de subir
+
+C:\xampp\htdocs\infols_informativa>git remote add origin https://github.com/SETELEC/infols
+fatal: remote origin already exists.
+
+C:\xampp\htdocs\infols_informativa>git push -u origin master
+To https://github.com/SETELEC/infols
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/SETELEC/infols'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\xampp\htdocs\infols_informativa>git pull origin master
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/SETELEC/infols
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+fatal: refusing to merge unrelated histories
+
+C:\xampp\htdocs\infols_informativa>git diff HEAD
+
+C:\xampp\htdocs\infols_informativa>git diff --staged
+
+C:\xampp\htdocs\infols_informativa>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\xampp\htdocs\infols_informativa>git add *.php
+
+C:\xampp\htdocs\infols_informativa>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\xampp\htdocs\infols_informativa>git branch clean up
+fatal: Not a valid object name: 'up'.
+
+C:\xampp\htdocs\infols_informativa>git branch clean_up
+
+C:\xampp\htdocs\infols_informativa>git add *.php
+
+C:\xampp\htdocs\infols_informativa>git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   test.php
+
+
+C:\xampp\htdocs\infols_informativa>git commit -m "tercer comentario"
+[master 017e303] tercer comentario
+ 1 file changed, 9 insertions(+)
+ create mode 100644 test.php
+
+C:\xampp\htdocs\infols_informativa>git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+C:\xampp\htdocs\infols_informativa>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\xampp\htdocs\infols_informativa>git push --set-upstream origin master
+To https://github.com/SETELEC/infols
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/SETELEC/infols'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\xampp\htdocs\infols_informativa>git push --set-upstream origin mastergit push --set-upstream origin master
+error: src refspec mastergit does not match any.
+error: src refspec push does not match any.
+error: src refspec origin does not match any.
+error: failed to push some refs to 'https://github.com/SETELEC/infols'
+
+C:\xampp\htdocs\infols_informativa>git push --set-upstream origin master
+To https://github.com/SETELEC/infols
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/SETELEC/infols'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\xampp\htdocs\infols_informativa>
