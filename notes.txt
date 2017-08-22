@@ -203,3 +203,72 @@ hint: 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 C:\xampp\htdocs\infols_informativa>
+
+
+
+
+
+
+
+
+/// SUBIR ARCHIVOS AL SERVIDOR
+
+C:\xampp\htdocs\infols_informativa>git pull https://github.com/SETELEC/infols.git
+From https://github.com/SETELEC/infols
+ * branch            HEAD       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+C:\xampp\htdocs\infols_informativa>git fetch
+
+C:\xampp\htdocs\infols_informativa>git clone https://github.com/SETELEC/infols
+Cloning into 'infols'...
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+C:\xampp\htdocs\infols_informativa>git push -u origin master
+To https://github.com/SETELEC/infols
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/SETELEC/infols'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\xampp\htdocs\infols_informativa>git pull origin master
+From https://github.com/SETELEC/infols
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+C:\xampp\htdocs\infols_informativa>git remote -v
+origin  https://github.com/SETELEC/infols (fetch)
+origin  https://github.com/SETELEC/infols (push)
+upstream        https://github.com/SETELEC/infols (fetch)
+upstream        https://github.com/SETELEC/infols (push)
+
+C:\xampp\htdocs\infols_informativa>git push -u origin master
+To https://github.com/SETELEC/infols
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/SETELEC/infols'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\xampp\htdocs\infols_informativa>git pull --rebase origin master
+From https://github.com/SETELEC/infols
+ * branch            master     -> FETCH_HEAD
+First, rewinding head to replay your work on top of it...
+Applying: se cargan los archivos de texto
+
+C:\xampp\htdocs\infols_informativa>git push origin master
+Counting objects: 4, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 2.08 KiB | 533.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/SETELEC/infols
+   16c45cf..f1ca7a9  master -> master
+
+C:\xampp\htdocs\infols_informativa>
